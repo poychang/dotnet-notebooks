@@ -1,0 +1,22 @@
+#!markdown
+
+# What's dib
+
+New .NET Notebook with .NET Interactive will create `.dib` extention file.
+
+What's `.dib` file? Let's find out.
+
+#!csharp
+
+#!value --name data --mime-type application/json
+
+{
+    "name": "Poy Chang"
+}
+
+#!csharp
+
+#!share data --from value
+using System.Text.Json;
+var obj = JsonSerializer.Deserialize<object>(data);
+display(obj);
